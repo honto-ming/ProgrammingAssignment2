@@ -1,8 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This is for Assignment 2 for Coursera Programming in R. These functions below
+## can be used to calculate the inverse of a matrix. The result is cached after 
+## the first time the inverse calculation is made for the matrix so that the 
+## expensive inverse calculation does not have to be repeated every time.
 
-## Write a short comment describing this function
-
+## This creates the special "object" that stores the matrix, the inverse, and 
+## the functions to retrieve them 
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL 
     ## a "re-constructor" where you erase the inverse and set the new 
@@ -25,8 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## This function gets the inverse of the matrix stored in x. It tests if the
+## inverse is already cached. If not, it performs the inverse calculation. If it
+## is already in cached it just retrieves and returns it.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         # check to see if the makeVector "object," x, already has the mean cached
